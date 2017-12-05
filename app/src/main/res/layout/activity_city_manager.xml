@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firefinch.akashvani.activities.CityManagerActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Choose map or enter Name manually"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:background="@color/colorPrimaryDark">
+        <EditText
+            android:inputType="textCapWords"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="City Name"
+            android:id="@+id/etCityName"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dp" />
+        <ImageView
+            android:id="@+id/ivCityAdd"
+            android:src="@drawable/ic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ivPlacePicker"
+            android:layout_toLeftOf="@+id/ivPlacePicker" />
+
+        <ImageView
+            android:id="@+id/ivPlacePicker"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/place_picker_2"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:text="Cities added: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
